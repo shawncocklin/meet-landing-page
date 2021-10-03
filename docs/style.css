@@ -183,7 +183,7 @@ section {
 }
 
 footer {
-  background-image: url(/assets/mobile/image-footer.jpg);
+  background-image: url(./assets/mobile/image-footer.jpg);
   background-color: #4D96A9;
   background-blend-mode:soft-light;
   background-size: cover;
@@ -235,7 +235,7 @@ footer {
   }
 
   footer {
-    background-image: url(/assets/tablet/image-footer.jpg);
+    background-image: url(./assets/tablet/image-footer.jpg);
   }
 
   @media (min-width: 1000px) {
@@ -291,7 +291,7 @@ footer {
     }
 
     footer {
-      background-image: url(/assets/desktop/image-footer.jpg);
+      background-image: url(./assets/desktop/image-footer.jpg);
       display: grid;
       grid-template-columns: 1em 2fr 2fr 1fr 1em;
       gap: 3em;
