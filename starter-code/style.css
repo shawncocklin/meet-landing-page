@@ -1,0 +1,318 @@
+/*===========
+GLOBAL STYLES
+=============*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  color: #87879D;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*===========
+TYPOGRAPHY
+=============*/
+
+h1,
+h2,
+.main-subtitle {
+  font-weight: 900;
+}
+
+h1,
+h2 {
+  color: #28283d;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+.main-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #4d96a9;
+  line-height: 1.625;
+}
+
+.btn {
+  font-weight: 700;
+  color: #fafafa;
+}
+
+.accent {
+  opacity: .6;
+}
+
+.circle-number {
+  font-weight: 700;
+}
+
+.footer-title,
+.footer-body {
+  color: #fafafa;
+}
+
+/*===========
+BUTTONS
+=============*/
+
+.btn {
+  padding: 1em 2em;
+  border-radius: 100vh;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #4D96A9;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #8fe3f9;
+}
+
+.btn-secondary {
+  background-color: #855FB1;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #d9b8ff;
+}
+
+/*===========
+CIRCLED NUMBERS
+=============*/
+
+.circle-number {
+  position: relative;
+  display: inline;
+}
+
+.circle-number::before {
+  content: "";
+  border: 1px solid #87879D;
+  opacity: .25;
+  height: 90px;
+  position: absolute;
+  top: -110px;
+  left: 12px;
+}
+
+.circle-number::after {
+  content: "";
+  padding: 30px 30px;
+  border: 1px solid #87879D;
+  opacity: .4;
+  border-radius: 100%;
+  position: absolute;
+  inset: 0;
+  left: -19px;
+  top: -19px;
+}
+
+/*===========
+LAYOUT
+=============*/
+.logo {
+  margin: 4em auto;
+}
+
+.hero-img-left,
+.hero-img-right {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section {
+  max-width: 350px;
+  margin-bottom: 4em;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10em;
+}
+
+.btn {
+  align-self: center;
+  margin-bottom: 1em;
+}
+
+.main-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+  margin-top: 5em;
+}
+
+.main-img {
+  border-radius: 10px;
+}
+
+.main-text {
+  margin-bottom: 10em;
+}
+
+footer {
+  background-image: url(./assets/mobile/image-footer.jpg);
+  background-color: #4D96A9;
+  background-blend-mode:soft-light;
+  background-size: cover;
+  padding: 5em 2em;
+  margin-top: 5em;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-body {
+  margin-bottom: 3em;
+}
+
+@media (min-width: 600px) {
+  section {
+    max-width: 500px;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+
+  .hero-title {
+    margin-bottom: 0;
+  }
+
+  .hero-img,
+  .hero-title,
+  .hero-body {
+    grid-column: span 2;
+  }
+  
+  .btn-primary {
+    justify-self: end;
+  }
+
+  .btn-secondary {
+    justify-self: start;
+  }
+
+  .main-images {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5em;
+    margin-bottom: 2em;
+  }
+
+  footer {
+    background-image: url(./assets/tablet/image-footer.jpg);
+  }
+
+  @media (min-width: 1000px) {
+    .hero-img {
+      display: none;
+    }
+
+    .hero-img-left,
+    .hero-img-right {
+      display: block;
+    }
+
+    .hero {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 2fr;
+    }
+
+    .hero-img-left,
+    .hero-img-right {
+      grid-row: 1 / span 2;
+    }
+
+    .hero-title {
+      grid-row: 1;
+    }
+
+    .hero-body {
+      grid-row: 2;
+    }
+
+    .hero-img-left {
+      grid-column: 1;
+    }
+
+    .hero-img-right {
+      grid-column: 4;
+    }
+
+    .hero-title,
+    .hero-body {
+      grid-column: 2 / span 2;
+    }
+
+    .btn-primary {
+      grid-column: 2;
+    }
+
+    .main-images {
+      max-width: 800px;
+      gap: 1em;
+      margin-bottom: 4em;
+    }
+
+    footer {
+      background-image: url(./assets/desktop/image-footer.jpg);
+      display: grid;
+      grid-template-columns: 1em 2fr 2fr 1fr 1em;
+      gap: 3em;
+      text-align: left;
+      align-items: center;
+    }
+
+    .footer-title {
+      grid-column: 2;
+      margin-bottom: 1.5em;
+    }
+
+    .footer-body {
+      grid-column: 3;
+      width: 80%;
+    }
+
+    .btn-footer {
+      justify-self: end;
+    }
+
+  }
+    
+}
